@@ -1,6 +1,6 @@
 # Kivy Quiz App
 
-![Image](images\Background.jpg)
+![Image](images/Background.jpg)
 
 ## Introduction
 
@@ -44,7 +44,7 @@ Before using the Kivy Quiz App, make sure you have the following installed:
 
 ## Screenshots
 
-![Image](images\contestants.png)
+![Image](images/contestants.png)
 
 ## Usage
 
