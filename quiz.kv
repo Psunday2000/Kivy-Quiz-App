@@ -1,0 +1,182 @@
+ScreenManager:
+    SplashScreen:
+        name: "splash"
+    ContestantScreen:
+        name: "contestant"
+    QuestionScreen:
+        name: "question"
+    # ScoreboardScreen:
+    #     name: "scoreboard"
+
+<SplashScreen>:
+    name: "splash"
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '10dp'
+        spacing: '10dp'
+
+        Image:
+            source: 'images/Background.jpg'  # Replace 'splash.gif' with your GIF file path
+            allow_stretch: True
+            keep_ratio: True
+
+<ContestantScreen>:
+    name: "contestant"
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '5dp'
+        spacing: '5dp'
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0.40, 1  # Dark Navy Blue (RGBA format)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        GridLayout:
+            cols: 2
+            spacing: '5dp'
+
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: '5dp'
+                MDLabel:
+                    id: contestant_id
+                    text: ""
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+                Image:
+                    id: contestant_pics
+                    size_hint: None, None
+                    size: 500, 500
+                    allow_stretch: True
+                    keep_ratio: True
+                BoxLayout:
+                    orientation: 'horizontal'
+                    spacing: '5dp'
+                    MDRaisedButton:
+                        text: 'Start Quiz'
+                        font_name: "mob_font"
+                        font_size: '20sp'
+                        on_release: root.start_quiz()
+                    MDRaisedButton:
+                        text: "Next Contestant"
+                        font_name: "mob_font"
+                        font_size: '20sp'
+                        on_release: root.load_next_contestant()
+                    MDRaisedButton:
+                        text: "Previous Contestant"
+                        font_name: "mob_font"
+                        font_size: '20sp'
+                        on_release: root.load_previous_contestant()
+            BoxLayout:
+                orientation: 'vertical'
+                spacing: '5dp'
+
+                MDLabel:
+                    text: ""
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    id: contestant_name
+                    color: 1 , 1 , 1 , 1
+
+                MDLabel:
+                    id: contestant_age
+                    text: ''
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+                MDLabel:
+                    id: contestant_branch
+                    text: ''
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+                MDLabel:
+                    id: contestant_school
+                    text: ''
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+                MDLabel:
+                    id: contestant_class
+                    text: ''
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+                MDLabel:
+                    id: contestant_career
+                    text: ''
+                    font_name: "mob_font"
+                    font_size: '50sp'
+                    color: 1 , 1 , 1 , 1
+
+<CustomButton>:
+    background_color: 1, 1, 1, 1
+    font_name: "mob_font"
+    font_size: '50sp'
+
+<QuestionScreen>:
+    name: "question"
+    BoxLayout:
+        size: root.width, root.height
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0.40, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: dp(10)
+            padding: dp(10)
+            MDLabel:
+                id: question_text
+                text: ""
+                font_name: "mob_font"
+                font_size: '50sp'
+                halign: 'center'
+                color: 1, 1, 1, 1
+            CustomButton:
+                id: option1
+                text: ""
+                on_release: root.check_answer(option1)
+
+            CustomButton:
+                id: option2
+                text: ""
+                on_release: root.check_answer(option2)
+
+            CustomButton:
+                id: option3
+                text: ""
+                on_release: root.check_answer(option3)
+            
+            CustomButton:
+                text: "Next Question"
+                on_release: root.load_next_question()
+
+# <ScoreboardScreen>:
+#     BoxLayout:
+#         size: root.width, root.height
+#         orientation: 'vertical'
+#         canvas.before:
+#             Color:
+#                 rgba: 0.90, 0.90, 0.90, 1
+#             Rectangle:
+#                 size: self.size
+#                 pos: self.pos
+#         ScrollView:
+#             size_hint: 1, None
+#             size: self.size
+#             GridLayout:
+#                 id: scoreboard_grid
+#                 cols: 2
+#                 spacing: '10dp'

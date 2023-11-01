@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "options": ["Paris", "London", "Berlin"],
+    "correct_option": "Paris"
+  },
+  {
+    "question": "How many continents are there in the world?",
+    "options": ["4", "6", "7"],
+    "correct_option": "7"
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "options": ["Carbon dioxide", "Oxygen", "Nitrogen"],
+    "correct_option": "Carbon dioxide"
+  },
+  {
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "options": ["William Shakespeare", "Charles Dickens", "Jane Austen"],
+    "correct_option": "William Shakespeare"
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Mars", "Jupiter", "Saturn"],
+    "correct_option": "Jupiter"
+  },
+  {
+    "question": "Which gas is known as laughing gas?",
+    "options": ["Oxygen", "Nitrous Oxide", "Methane"],
+    "correct_option": "Nitrous Oxide"
+  },
+  {
+    "question": "In which year did Christopher Columbus discover America?",
+    "options": ["1492", "1520", "1607"],
+    "correct_option": "1492"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "options": ["Go", "Au", "Ag"],
+    "correct_option": "Au"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso"],
+    "correct_option": "Leonardo da Vinci"
+  },
+  {
+    "question": "What is the largest mammal on Earth?",
+    "options": ["Elephant", "Blue Whale", "Giraffe"],
+    "correct_option": "Blue Whale"
+  }
+]
